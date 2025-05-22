@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work Logger</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Work Logger</h1>
+
+        <div class="quick-actions">
+            <h2>Quick Start/Stop</h2>
+            <button id="startHomeBtn">Start Work (Home)</button>
+            <button id="startOfficeBtn">Start Work (Office)</button>
+            <button id="stopWorkBtn">Stop Current Work</button>
+            <p id="currentStatus">Status: Not working</p>
+        </div>
+
+        <div class="manual-entry">
+            <h2>Manual Entry / Correction</h2>
+            <label for="workDate">Date:</label>
+            <input type="date" id="workDate" required>
+
+            <label for="startTime">Start Time:</label>
+            <input type="time" id="startTime" required>
+
+            <label for="endTime">End Time:</label>
+            <input type="time" id="endTime">
+
+            <label for="location">Location:</label>
+            <select id="location">
+                <option value="Home">Home</option>
+                <option value="Office">Office</option>
+            </select>
+
+            <label for="notes">Notes (Optional):</label>
+            <textarea id="notes" rows="2"></textarea>
+
+            <button id="addEntryBtn">Add/Update Manual Entry</button>
+        </div>
+
+        <div class="log-display">
+            <h2>Logged Entries</h2>
+            <button id="refreshLogBtn">Refresh Log</button>
+            <table id="logTable">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Start Time</th>
+                        <th>End Time</th>
+                        <th>Location</th>
+                        <th>Duration</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Log entries will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
