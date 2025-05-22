@@ -1,5 +1,5 @@
 // IMPORTANT: Paste your Google Apps Script Web App URL here
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyAhANkNWqHPLLHBIaMgJEh-awAbmB1fxWk2CdahkvO7S2RcEdgbgqJ2gxcZJwhCz2D/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxAbYk6vTXm_c4JEzIK95SnWOcVZtumfpTz1KhnTXoIQXnM2aybvHB1_Peg6iyc_C8B/exec";
 
 const startHomeBtn = document.getElementById('startHomeBtn');
 const startOfficeBtn = document.getElementById('startOfficeBtn');
@@ -52,7 +52,7 @@ async function saveData(data) {
     try {
         const response = await fetch(SCRIPT_URL, {
             method: 'POST',
-            mode: 'cors', // Important for cross-origin requests
+            // mode: 'cors', // Removed
             cache: 'no-cache',
             headers: {
                 'Content-Type': 'application/json',
@@ -158,7 +158,7 @@ async function loadLogEntries() {
         // Append a dummy query param to try and bypass caching if needed
         const response = await fetch(`${SCRIPT_URL}?cacheBust=${new Date().getTime()}`, {
              method: 'GET',
-             mode: 'cors' // if your script returns JSON directly
+             // mode: 'cors' // Removed
         });
         const result = await response.json();
 
