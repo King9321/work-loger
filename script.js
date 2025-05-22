@@ -1,5 +1,5 @@
 // IMPORTANT: Paste your Google Apps Script Web App URL here
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxAbYk6vTXm_c4JEzIK95SnWOcVZtumfpTz1KhnTXoIQXnM2aybvHB1_Peg6iyc_C8B/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzaCHgKht6ambjML-_2E2ixF3EHECiAPdYJx3_E5Ts1t6FDcYjDMdZZQn2da8pQpcAk/exec";
 
 const startHomeBtn = document.getElementById('startHomeBtn');
 const startOfficeBtn = document.getElementById('startOfficeBtn');
